@@ -3,56 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hima Estates</title>
+
+  <title>Hima Estates | Luxury Serviced Residences</title>
+  <meta name="description" content="Hima Estates offers luxury serviced residences with refined interiors, elegant common spaces, and a calm premium living experience.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      color: #1c1c1c;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    header {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    header video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    header .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255,255,255,0.6);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 20px;
       text-align: center;
     }
 
-    section {
-      padding: 60px 20px;
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
     }
 
-    video {
+    p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #444;
+    }
+
+    video.section-video {
       width: 100%;
-      max-width: 900px;
-      height: auto;
+      max-width: 1000px;
+      border-radius: 6px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 36px;
+      border: 1px solid #1c1c1c;
+      text-decoration: none;
+      color: #1c1c1c;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1c1c1c;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO : EXTERIOR VIDEO -->
-<section>
-  <h1>Hima Estates</h1>
-  <p>Luxury Serviced Residences</p>
-
+<!-- HERO -->
+<header>
   <video autoplay muted loop playsinline>
     <source src="assets/images/exterior.mp4" type="video/mp4">
   </video>
-</section>
 
-<!-- INTERIOR -->
+  <div class="overlay">
+    <div>
+      <h1>Hima Estates</h1>
+      <p>Curated luxury residences designed for refined stays</p>
+    </div>
+  </div>
+</header>
+
+<!-- INTERIORS -->
 <section>
   <h2>Interiors</h2>
+  <p>Elegant interiors crafted for comfort, privacy, and understated luxury.</p>
 
-  <video autoplay muted loop playsinline>
+  <video class="section-video" autoplay muted loop playsinline>
     <source src="assets/images/interior.mp4" type="video/mp4">
   </video>
 </section>
 
-<!-- COMMON -->
+<!-- COMMON SPACES -->
 <section>
   <h2>Common Spaces</h2>
+  <p>Calm, refined shared areas designed for relaxation and quiet moments.</p>
 
-  <video autoplay muted loop playsinline>
+  <video class="section-video" autoplay muted loop playsinline>
     <source src="assets/images/common.mp4" type="video/mp4">
   </video>
 </section>
+
+<!-- BOOKINGS -->
+<section>
+  <h2>Book Your Stay</h2>
+  <a class="btn" href="AIRBNB_LINK" target="_blank">Book on Airbnb</a>
+  <a class="btn" href="BOOKING_LINK" target="_blank">View on Booking.com</a>
+  <a class="btn" href="https://wa.me/YOURNUMBER">Contact Concierge</a>
+</section>
+
+<footer>
+  © Hima Estates · Luxury Serviced Residences
+</footer>
 
 </body>
 </html>
