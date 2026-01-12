@@ -21,18 +21,36 @@
       line-height: 1.6;
     }
 
+    /* HERO */
     header {
+      position: relative;
       height: 90vh;
-      background: #f4f4f4;
+      overflow: hidden;
+    }
+
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    header .overlay {
+      position: relative;
+      z-index: 1;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      background: rgba(255,255,255,0.65);
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.4rem;
+      font-size: 3.5rem;
       margin: 0;
       letter-spacing: 1px;
     }
@@ -40,9 +58,10 @@
     header p {
       margin-top: 12px;
       font-size: 1.1rem;
-      color: #555;
+      color: #444;
     }
 
+    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
@@ -52,7 +71,7 @@
 
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 20px;
     }
 
@@ -62,6 +81,13 @@
       color: #444;
     }
 
+    video.section-video {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 4px;
+    }
+
+    /* BUTTONS */
     .btn {
       display: inline-block;
       margin: 10px;
@@ -76,8 +102,10 @@
     .btn:hover {
       background: #1c1c1c;
       color: #ffffff;
+      transform: translateY(-2px);
     }
 
+    /* FOOTER */
     footer {
       padding: 40px 20px;
       text-align: center;
@@ -90,27 +118,46 @@
 
 <body>
 
+<!-- HERO : EXTERIOR VIDEO -->
 <header>
-  <div>
-    <h1>Hima Estates</h1>
-    <p>Curated luxury residences designed for refined stays</p>
+  <video autoplay muted loop playsinline>
+    <source src="assets/images/exterior.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay">
+    <div>
+      <h1>Hima Estates</h1>
+      <p>Curated luxury residences designed for refined stays</p>
+    </div>
   </div>
 </header>
 
+<!-- INTERIORS -->
 <section>
-  <h2>The Estate</h2>
-  <p>
-    Hima Estates is a premium residential property offering thoughtfully
-    designed interiors, elegant common spaces, and a calm architectural
-    presence for discerning guests.
-  </p>
-  <a class="btn" href="#">Explore the Property</a>
+  <h2>Interiors</h2>
+  <p>Elegant interiors crafted for comfort, privacy, and understated luxury.</p>
+
+  <video class="section-video" autoplay muted loop playsinline>
+    <source src="assets/images/interior.mp4" type="video/mp4">
+  </video>
 </section>
 
+<!-- COMMON SPACES -->
 <section>
-  <h2>Bookings</h2>
-  <a class="btn" href="#">Book on Airbnb</a>
-  <a class="btn" href="#">View on Booking.com</a>
+  <h2>Common Spaces</h2>
+  <p>Calm, refined shared areas designed for relaxation and quiet moments.</p>
+
+  <video class="section-video" autoplay muted loop playsinline>
+    <source src="assets/images/common.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- BOOKINGS -->
+<section>
+  <h2>Book Your Stay</h2>
+  <a class="btn" href="AIRBNB_LINK" target="_blank">Book on Airbnb</a>
+  <a class="btn" href="BOOKING_LINK" target="_blank">View on Booking.com</a>
+  <a class="btn" href="https://wa.me/YOURNUMBER">Contact Concierge</a>
 </section>
 
 <footer>
