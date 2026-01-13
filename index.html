@@ -1,74 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Hima Estates | Luxury Serviced Residences</title>
+
+  <meta name="description" content="Hima Estates offers luxury serviced residences with refined interiors, elegant common spaces, and a calm premium living experience." />
+
   <link rel="canonical" href="https://meghashyam-nb.github.io/hima-estates_trail/" />
-  
-  <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-  <!-- REPLACE THE CONTENT VALUE WITH THE ONE GOOGLE GIVES YOU -->
+
+  <!-- Google Verification (KEEP THIS) -->
   <meta name="google-site-verification" content="uqnKNOGzkaXYVj9JGyxLUX-l-rpoITsAgxA4Sooacg0" />
 
-  <meta name="description" content="Hima Estates offers luxury serviced residences with refined interiors, elegant common spaces, and a calm premium living experience.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --text-dark: #1c1c1c;
+      --text-light: #555;
+      --border-light: #eaeaea;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #1c1c1c;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    /* ===== HERO ===== */
+    header {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    header video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* FIXES BLACK BARS */
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
 
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .hero-content p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    /* ===== SECTIONS ===== */
     section {
-      padding: 60px 20px;
-    }
-
-    video {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+      text-align: center;
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      margin-bottom: 18px;
     }
 
     p {
-      max-width: 700px;
-      margin: 0 auto 20px;
-      color: #444;
+      max-width: 720px;
+      margin: 0 auto 35px;
+      color: var(--text-light);
+    }
+
+    /* ===== VIDEO BLOCKS ===== */
+    .video-block {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    .video-block video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* FIXES BLACK BARS */
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      margin: 12px;
+      padding: 14px 36px;
+      border: 1px solid var(--text-dark);
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--text-dark);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      header {
+        height: 75vh;
+      }
+
+      .video-block {
+        height: 300px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.6rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO : EXTERIOR VIDEO -->
-<section>
-  <h1>Hima Estates</h1>
-  <p>Luxury Serviced Residences</p>
-
+<!-- HERO -->
+<header>
   <video autoplay muted loop playsinline>
     <source src="assets/images/exterior.mp4" type="video/mp4">
   </video>
-</section>
 
-<!-- INTERIOR -->
+  <div class="hero-content">
+    <div>
+      <h1>Hima Estates</h1>
+      <p>Curated luxury residences designed for refined stays</p>
+    </div>
+  </div>
+</header>
+
+<!-- INTERIORS -->
 <section>
   <h2>Interiors</h2>
   <p>Elegant interiors crafted for comfort, privacy, and understated luxury.</p>
 
-  <video autoplay muted loop playsinline>
-    <source src="assets/images/interior.mp4" type="video/mp4">
-  </video>
+  <div class="video-block">
+    <video autoplay muted loop playsinline>
+      <source src="assets/images/interior.mp4" type="video/mp4">
+    </video>
+  </div>
 </section>
 
 <!-- COMMON SPACES -->
@@ -76,10 +190,24 @@
   <h2>Common Spaces</h2>
   <p>Calm, refined shared areas designed for relaxation and quiet moments.</p>
 
-  <video autoplay muted loop playsinline>
-    <source src="assets/images/common.mp4" type="video/mp4">
-  </video>
+  <div class="video-block">
+    <video autoplay muted loop playsinline>
+      <source src="assets/images/common.mp4" type="video/mp4">
+    </video>
+  </div>
 </section>
+
+<!-- BOOKINGS -->
+<section>
+  <h2>Book Your Stay</h2>
+  <a class="btn" href="AIRBNB_LINK" target="_blank">Book on Airbnb</a>
+  <a class="btn" href="BOOKING_LINK" target="_blank">View on Booking.com</a>
+  <a class="btn" href="https://wa.me/YOURNUMBER">Contact Concierge</a>
+</section>
+
+<footer>
+  © Hima Estates · Luxury Serviced Residences
+</footer>
 
 </body>
 </html>
