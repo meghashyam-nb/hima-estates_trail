@@ -6,152 +6,140 @@
 
   <title>Hima Estates | Luxury Serviced Residences</title>
 
-  <meta name="description" content="Hima Estates offers luxury serviced residences with refined interiors, elegant common spaces, and a calm premium living experience." />
+  <meta name="description" content="Hima Estates is a luxury serviced residence offering refined interiors, elegant common spaces, and a calm, premium living experience." />
 
   <link rel="canonical" href="https://meghashyam-nb.github.io/hima-estates_trail/" />
 
-  <!-- Google Verification (KEEP THIS) -->
+  <!-- Google verification (KEEP) -->
   <meta name="google-site-verification" content="uqnKNOGzkaXYVj9JGyxLUX-l-rpoITsAgxA4Sooacg0" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --text-dark: #1c1c1c;
-      --text-light: #555;
-      --border-light: #eaeaea;
-    }
-
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
+      color: #1c1c1c;
       background: #ffffff;
-      line-height: 1.7;
     }
 
     /* ===== HERO ===== */
-    header {
+    .hero {
       position: relative;
       height: 90vh;
       overflow: hidden;
     }
 
-    header video {
-      position: absolute;
-      inset: 0;
+    .hero video {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* FIXES BLACK BARS */
+      object-fit: cover;
     }
 
-    header::after {
-      content: "";
+    .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.6rem;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    .hero-content p {
-      margin-top: 12px;
-      font-size: 1.1rem;
-      color: var(--text-light);
-    }
-
-    /* ===== SECTIONS ===== */
-    section {
       max-width: 1200px;
       margin: auto;
-      padding: 100px 20px;
-      text-align: center;
+      padding: 0 40px;
     }
 
-    h2 {
+    .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    .hero p {
+      margin-top: 16px;
+      font-size: 1.1rem;
+      max-width: 520px;
+      color: #444;
+    }
+
+    /* ===== SECTION BASE ===== */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 120px 40px;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
       margin-bottom: 18px;
     }
 
-    p {
-      max-width: 720px;
-      margin: 0 auto 35px;
-      color: var(--text-light);
+    .section p {
+      max-width: 520px;
+      color: #444;
+      margin-bottom: 40px;
+      line-height: 1.8;
     }
 
-    /* ===== VIDEO BLOCKS ===== */
-    .video-block {
-      position: relative;
+    /* ===== VIDEO FRAME ===== */
+    .video-frame {
       width: 100%;
-      height: 500px;
+      height: 520px;
       overflow: hidden;
-      border-radius: 6px;
     }
 
-    .video-block video {
+    .video-frame video {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* FIXES BLACK BARS */
+      object-fit: cover;
     }
 
-    /* ===== BUTTONS ===== */
+    /* ===== BOOKINGS ===== */
+    .booking {
+      border-top: 1px solid #eaeaea;
+      text-align: left;
+    }
+
     .btn {
       display: inline-block;
-      margin: 12px;
-      padding: 14px 36px;
-      border: 1px solid var(--text-dark);
+      margin-right: 20px;
+      padding: 14px 34px;
+      border: 1px solid #1c1c1c;
       text-decoration: none;
-      color: var(--text-dark);
+      color: #1c1c1c;
       font-size: 0.9rem;
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: var(--text-dark);
+      background: #1c1c1c;
       color: #ffffff;
-      transform: translateY(-2px);
     }
 
-    /* ===== FOOTER ===== */
     footer {
-      border-top: 1px solid var(--border-light);
-      padding: 40px 20px;
-      text-align: center;
+      padding: 40px;
       font-size: 0.85rem;
       color: #777;
+      border-top: 1px solid #eee;
     }
 
     /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-      header {
-        height: 75vh;
+      .hero h1 {
+        font-size: 2.8rem;
       }
 
-      .video-block {
+      .section {
+        padding: 80px 24px;
+      }
+
+      .video-frame {
         height: 300px;
-      }
-
-      .hero-content h1 {
-        font-size: 2.6rem;
       }
     }
   </style>
@@ -160,50 +148,59 @@
 <body>
 
 <!-- HERO -->
-<header>
+<div class="hero">
   <video autoplay muted loop playsinline>
     <source src="assets/images/exterior.mp4" type="video/mp4">
   </video>
 
-  <div class="hero-content">
-    <div>
+  <div class="hero-overlay">
+    <div class="hero-content">
       <h1>Hima Estates</h1>
-      <p>Curated luxury residences designed for refined stays</p>
+      <p>
+        A curated luxury residence designed for calm living,
+        refined comfort, and understated elegance.
+      </p>
     </div>
   </div>
-</header>
+</div>
 
 <!-- INTERIORS -->
-<section>
+<div class="section">
   <h2>Interiors</h2>
-  <p>Elegant interiors crafted for comfort, privacy, and understated luxury.</p>
+  <p>
+    Thoughtfully designed interiors where material, light,
+    and space come together to create a refined living experience.
+  </p>
 
-  <div class="video-block">
+  <div class="video-frame">
     <video autoplay muted loop playsinline>
       <source src="assets/images/interior.mp4" type="video/mp4">
     </video>
   </div>
-</section>
+</div>
 
 <!-- COMMON SPACES -->
-<section>
+<div class="section">
   <h2>Common Spaces</h2>
-  <p>Calm, refined shared areas designed for relaxation and quiet moments.</p>
+  <p>
+    Shared spaces designed for quiet moments, connection,
+    and a sense of relaxed luxury.
+  </p>
 
-  <div class="video-block">
+  <div class="video-frame">
     <video autoplay muted loop playsinline>
       <source src="assets/images/common.mp4" type="video/mp4">
     </video>
   </div>
-</section>
+</div>
 
 <!-- BOOKINGS -->
-<section>
+<div class="section booking">
   <h2>Book Your Stay</h2>
-  <a class="btn" href="https://www.airbnb.co.uk/rooms/1506240650680777224?viralityEntryPoint=1&s=76&source_impression_id=p3_1768236613_P3IbMIHYIHDIJRzv" target="_blank">Book on Airbnb</a>
+  <a class="btn" href="AIRBNB_LINK" target="_blank">Book on Airbnb</a>
   <a class="btn" href="BOOKING_LINK" target="_blank">View on Booking.com</a>
   <a class="btn" href="https://wa.me/YOURNUMBER">Contact Concierge</a>
-</section>
+</div>
 
 <footer>
   © Hima Estates · Luxury Serviced Residences
