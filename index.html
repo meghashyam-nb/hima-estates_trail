@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Hima Estates | Luxury Serviced Residences</title>
-  <meta name="description" content="Hima Estates is a premium serviced residence offering refined interiors, elegant common spaces, and a calm, modern living experience." />
+  <meta name="description" content="Hima Estates is a premium serviced residence offering refined interiors, elegant common spaces, and calm, modern living." />
 
   <link rel="canonical" href="https://meghashyam-nb.github.io/hima-estates_trail/" />
 
-  <!-- Google Verification (KEEP) -->
+  <!-- Google Search Console Verification (KEEP THIS) -->
   <meta name="google-site-verification" content="uqnKNOGzkaXYVj9JGyxLUX-l-rpoITsAgxA4Sooacg0" />
 
   <!-- Fonts -->
@@ -32,7 +32,7 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       color: var(--dark);
-      background: #fff;
+      background: #ffffff;
       line-height: 1.7;
     }
 
@@ -55,6 +55,11 @@
       align-items: center;
     }
 
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+    }
+
     nav a {
       text-decoration: none;
       color: var(--dark);
@@ -62,15 +67,10 @@
       font-size: 0.9rem;
     }
 
-    .brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-    }
-
     /* ================= HERO ================= */
     header {
-      height: 100vh;
       position: relative;
+      height: 100vh;
       margin-top: 60px;
       overflow: hidden;
     }
@@ -81,21 +81,25 @@
       object-fit: cover;
     }
 
+    /* DARK GRADIENT OVERLAY — FIXES FOGGY LOOK */
     header::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255,255,255,0.55);
+      background: linear-gradient(
+        rgba(0,0,0,0.28),
+        rgba(0,0,0,0.28)
+      );
     }
 
     .hero-content {
       position: absolute;
       inset: 0;
+      z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      z-index: 2;
       padding: 0 24px;
     }
 
@@ -103,13 +107,14 @@
       font-family: 'Playfair Display', serif;
       font-size: 3.8rem;
       margin-bottom: 16px;
+      color: #ffffff;
     }
 
     .hero-content p {
       max-width: 600px;
       margin: auto;
-      color: var(--muted);
       font-size: 1.05rem;
+      color: #f0f0f0;
     }
 
     /* ================= SECTIONS ================= */
@@ -163,7 +168,7 @@
 
     .btn:hover {
       background: var(--dark);
-      color: #fff;
+      color: #ffffff;
     }
 
     /* ================= FOOTER ================= */
@@ -180,7 +185,7 @@
         grid-template-columns: 1fr;
       }
 
-      header h1 {
+      .hero-content h1 {
         font-size: 2.6rem;
       }
 
