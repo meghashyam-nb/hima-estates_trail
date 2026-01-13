@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Hima Estates | Luxury Serviced Residences</title>
-
-  <meta name="description" content="Hima Estates is a luxury serviced residence offering refined interiors, elegant common spaces, and a calm, premium living experience." />
+  <meta name="description" content="Hima Estates is a premium serviced residence offering refined interiors, elegant common spaces, and a calm, modern living experience." />
 
   <link rel="canonical" href="https://meghashyam-nb.github.io/hima-estates_trail/" />
 
-  <!-- Google verification (KEEP) -->
+  <!-- Google Verification (KEEP) -->
   <meta name="google-site-verification" content="uqnKNOGzkaXYVj9JGyxLUX-l-rpoITsAgxA4Sooacg0" />
 
   <!-- Fonts -->
@@ -19,127 +18,174 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --dark: #1c1c1c;
+      --muted: #555;
+      --border: #e6e6e6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      color: #1c1c1c;
-      background: #ffffff;
+      color: var(--dark);
+      background: #fff;
+      line-height: 1.7;
     }
 
-    /* ===== HERO ===== */
-    .hero {
-      position: relative;
-      height: 90vh;
-      overflow: hidden;
-    }
-
-    .hero video {
+    /* ================= NAV ================= */
+    nav {
+      position: fixed;
+      top: 0;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0.65);
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 32px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
     }
 
-    .hero-content {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 40px;
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      margin-left: 24px;
+      font-size: 0.9rem;
     }
 
-    .hero h1 {
+    .brand {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      margin: 0;
+      font-size: 1.4rem;
     }
 
-    .hero p {
-      margin-top: 16px;
-      font-size: 1.1rem;
-      max-width: 520px;
-      color: #444;
-    }
-
-    /* ===== SECTION BASE ===== */
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 120px 40px;
-    }
-
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      margin-bottom: 18px;
-    }
-
-    .section p {
-      max-width: 520px;
-      color: #444;
-      margin-bottom: 40px;
-      line-height: 1.8;
-    }
-
-    /* ===== VIDEO FRAME ===== */
-    .video-frame {
-      width: 100%;
-      height: 520px;
+    /* ================= HERO ================= */
+    header {
+      height: 100vh;
+      position: relative;
+      margin-top: 60px;
       overflow: hidden;
     }
 
-    .video-frame video {
+    header video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    /* ===== BOOKINGS ===== */
-    .booking {
-      border-top: 1px solid #eaeaea;
-      text-align: left;
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.55);
     }
 
+    .hero-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 2;
+      padding: 0 24px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      margin-bottom: 16px;
+    }
+
+    .hero-content p {
+      max-width: 600px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 120px 32px;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 600px;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    /* ================= GRID ================= */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .video-card {
+      height: 420px;
+      overflow: hidden;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ================= BUTTONS ================= */
     .btn {
       display: inline-block;
-      margin-right: 20px;
-      padding: 14px 34px;
-      border: 1px solid #1c1c1c;
+      padding: 14px 36px;
+      border: 1px solid var(--dark);
       text-decoration: none;
-      color: #1c1c1c;
+      color: var(--dark);
       font-size: 0.9rem;
       transition: all 0.3s ease;
+      margin-right: 16px;
     }
 
     .btn:hover {
-      background: #1c1c1c;
-      color: #ffffff;
+      background: var(--dark);
+      color: #fff;
     }
 
+    /* ================= FOOTER ================= */
     footer {
-      padding: 40px;
+      border-top: 1px solid var(--border);
+      padding: 60px 32px;
       font-size: 0.85rem;
       color: #777;
-      border-top: 1px solid #eee;
     }
 
-    /* ===== MOBILE ===== */
+    /* ================= MOBILE ================= */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.8rem;
+      .grid {
+        grid-template-columns: 1fr;
       }
 
-      .section {
+      header h1 {
+        font-size: 2.6rem;
+      }
+
+      section {
         padding: 80px 24px;
-      }
-
-      .video-frame {
-        height: 300px;
       }
     }
   </style>
@@ -147,60 +193,80 @@
 
 <body>
 
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand">Hima Estates</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#spaces">Spaces</a>
+      <a href="#book">Book</a>
+    </div>
+  </div>
+</nav>
+
 <!-- HERO -->
-<div class="hero">
+<header>
   <video autoplay muted loop playsinline>
     <source src="assets/images/exterior.mp4" type="video/mp4">
   </video>
 
-  <div class="hero-overlay">
-    <div class="hero-content">
+  <div class="hero-content">
+    <div>
       <h1>Hima Estates</h1>
       <p>
-        A curated luxury residence designed for calm living,
-        refined comfort, and understated elegance.
+        A thoughtfully designed serviced residence offering calm spaces,
+        modern comfort, and refined living.
       </p>
     </div>
   </div>
-</div>
+</header>
 
-<!-- INTERIORS -->
-<div class="section">
-  <h2>Interiors</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About the Estate</h2>
   <p>
-    Thoughtfully designed interiors where material, light,
-    and space come together to create a refined living experience.
+    Hima Estates is designed for guests who value quiet comfort, modern design,
+    and a sense of home. Every space is curated to balance privacy, elegance,
+    and functionality.
+  </p>
+</section>
+
+<!-- SPACES -->
+<section id="spaces">
+  <h2>Our Spaces</h2>
+  <p>
+    From refined interiors to welcoming shared areas, every part of the estate
+    is designed with intention.
   </p>
 
-  <div class="video-frame">
-    <video autoplay muted loop playsinline>
-      <source src="assets/images/interior.mp4" type="video/mp4">
-    </video>
+  <div class="grid">
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="assets/images/interior.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="assets/images/common.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- COMMON SPACES -->
-<div class="section">
-  <h2>Common Spaces</h2>
-  <p>
-    Shared spaces designed for quiet moments, connection,
-    and a sense of relaxed luxury.
-  </p>
-
-  <div class="video-frame">
-    <video autoplay muted loop playsinline>
-      <source src="assets/images/common.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-
-<!-- BOOKINGS -->
-<div class="section booking">
+<!-- BOOK -->
+<section id="book">
   <h2>Book Your Stay</h2>
+  <p>
+    Experience Hima Estates by booking through our trusted partners or
+    contacting us directly.
+  </p>
+
   <a class="btn" href="AIRBNB_LINK" target="_blank">Book on Airbnb</a>
   <a class="btn" href="BOOKING_LINK" target="_blank">View on Booking.com</a>
   <a class="btn" href="https://wa.me/YOURNUMBER">Contact Concierge</a>
-</div>
+</section>
 
 <footer>
   © Hima Estates · Luxury Serviced Residences
